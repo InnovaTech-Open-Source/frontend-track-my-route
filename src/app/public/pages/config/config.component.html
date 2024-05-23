@@ -1,0 +1,37 @@
+<h1 class="title">Configuracion</h1>
+<div class="container">
+  <mat-card class="example-card">
+    <div class="content-container">
+      <div class="left-section">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+        </mat-card-header>
+        <mat-card-title>Plan Actual</mat-card-title>
+        <mat-card-subtitle>Free <button mat-button class="change-plan-button">Cambiar Plan</button>
+        </mat-card-subtitle>
+
+      </div>
+      <div class="right-section">
+        <mat-card-actions>
+          <mat-form-field *ngIf="nombreEditable" >
+            <input matInput [(ngModel)]="nombre" (blur)="nombreEditable=false; guardarCambios('nombre')" (keyup.enter)="nombreEditable=false; guardarCambios('nombre')" />
+          </mat-form-field>
+          <span *ngIf="!nombreEditable" (click)="nombreEditable=true">{{ nombre }}</span>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+          </p>
+          <mat-form-field *ngIf="apellidoEditable">
+            <input matInput [(ngModel)]="apellido" (blur)="apellidoEditable=false; guardarCambios('apellido')" (keyup.enter)="apellidoEditable=false; guardarCambios('apellido')" />
+          </mat-form-field>
+          <span *ngIf="!apellidoEditable" (click)="apellidoEditable=true">{{ apellido }}</span>
+        </mat-card-actions>
+        <mat-card-actions>
+          <mat-form-field *ngIf="emailEditable">
+            <input matInput [(ngModel)]="email" (blur)="emailEditable=false; guardarCambios('email')" (keyup.enter)="emailEditable=false; guardarCambios('email')" />
+          </mat-form-field>
+          <span *ngIf="!emailEditable" (click)="emailEditable=true">{{ email }}</span>
+        </mat-card-actions>
+      </div>
+    </div>
+  </mat-card>
+</div>

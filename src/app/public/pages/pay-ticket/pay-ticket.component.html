@@ -1,0 +1,59 @@
+<div class="pay-ticket-container">
+  <h1 class="title">Pagar Pasaje</h1>
+  <div class="form-container">
+    <div class="select-container">
+      <p>Seleccionar Bus/Empresa de Transporte:</p>
+      <mat-form-field>
+        <mat-label>Selecciona Bus/Empresa</mat-label>
+        <mat-select>
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="select-container">
+      <p>Selecciona Paradero de Origen:</p>
+      <mat-form-field>
+        <mat-label>Selecciona Origen</mat-label>
+        <mat-select>
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="select-container">
+      <p>Selecciona Paradero de Destino:</p>
+      <mat-form-field>
+        <mat-label>Selecciona Destino:</mat-label>
+        <mat-select>
+          <mat-option>None</mat-option>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2">Option 2</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="select-container">
+      <p>Total a Pagar:</p>
+      <p id="ticket-price">S/ 2.50</p>
+    </div>
+
+    <div class="pay-method-container">
+      <h2>Pagar con:</h2>
+      <div class="btn-container">
+        <button mat-flat-button mat-raised-button color="primary">Tarjeta de Débito/Crédito</button>
+        <button mat-flat-button mat-raised-button color="primary">Yape</button>
+        <button mat-flat-button mat-raised-button color="primary">Plin</button>
+        <button mat-flat-button mat-raised-button color="primary">Paypal</button>
+        <button mat-flat-button mat-raised-button color="accent">Generar Codigo de Verificación</button>
+      </div>
+    </div>
+  </div>
+</div>

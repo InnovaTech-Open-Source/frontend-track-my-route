@@ -1,0 +1,81 @@
+<mat-drawer-container class="sidenav-container">
+  <mat-drawer mode="side" [opened]="isDrawerOpen"  class="sidenav">
+    <mat-toolbar>
+      <h1 class="title-side-nav">TrackMyRoute</h1>
+    </mat-toolbar>
+    <mat-nav-list class="sidenav-btn-container">
+      <mat-list-item class="sidenav-item">
+        <button mat-raised-button color="primary" class="sidenav-btn"
+                (click)="navigateTo('/sidebar/notifications')"
+                [style.background-color]="isNotificationsButtonClicked ? 'green' : 'white'"
+                [style.color]="isNotificationsButtonClicked ? 'white' : 'black'">
+          <mat-icon class="icon-btn" aria-hidden="false" aria-label="notifications-icon" fontIcon="notifications"></mat-icon>
+          Notificaciones
+        </button>
+      </mat-list-item>
+      <mat-list-item class="sidenav-item">
+        <button mat-raised-button color="primary" class="sidenav-btn"
+                (click)="navigateTo('/sidebar/search')"
+                [style.background-color]="isSearchRoutesButtonClicked? 'green' : 'white'"
+                [style.color]="isSearchRoutesButtonClicked ? 'white' : 'black'">
+          <mat-icon class="icon-btn" aria-hidden="false" aria-label="search_routes-icon" fontIcon="search"></mat-icon>
+          Buscar Rutas
+        </button>
+      </mat-list-item>
+      <mat-list-item class="sidenav-item">
+        <button mat-raised-button color="primary" class="sidenav-btn"
+                (click)="navigateTo('/sidebar/pay-ticket')"
+                [style.background-color]="isButtonClicked ? 'green' : 'white'"
+                [style.color]="isButtonClicked ? 'white' : 'black'">
+          <mat-icon class="icon-btn" aria-hidden="false" aria-label="search_routes-icon" fontIcon="paid"></mat-icon>
+          Pagar Pasaje
+        </button>
+      </mat-list-item>
+      <mat-list-item class="sidenav-item">
+        <button mat-raised-button color="primary" class="sidenav-btn"
+                (click)="navigateTo('/sidebar/promos')"
+                [style.background-color]="isPromosButtonClicked ? 'green' : 'white'"
+                [style.color]="isPromosButtonClicked ? 'white' : 'black'">
+          <mat-icon class="icon-btn" aria-hidden="false" aria-label="search_routes-icon" fontIcon="loyalty"></mat-icon>
+          Promociones
+        </button>
+      </mat-list-item>
+      <mat-list-item class="sidenav-item">
+        <button mat-raised-button color="primary" class="sidenav-btn"
+                (click)="navigateTo('/sidebar/history')"
+                [style.background-color]="isHistoryButtonClicked ? 'green' : 'white'"
+                [style.color]="isHistoryButtonClicked ? 'white' : 'black'">
+          <mat-icon class="icon-btn" aria-hidden="false" aria-label="search_routes-icon" fontIcon="history"></mat-icon>
+          Historial de Viajes
+        </button>
+      </mat-list-item>
+      <mat-list-item class="sidenav-item">
+        <button mat-raised-button color="primary" class="sidenav-btn"
+                (click)="navigateTo('/sidebar/help')"
+                [style.background-color]="isHelpButtonClicked ? 'green' : 'white'"
+                [style.color]="isHelpButtonClicked ? 'white' : 'black'">
+          <mat-icon class="icon-btn" aria-hidden="false" aria-label="search_routes-icon" fontIcon="contact_support"></mat-icon>
+          Soporte y Ayuda
+        </button>
+      </mat-list-item>
+      <mat-list-item class="sidenav-item">
+        <button mat-raised-button color="primary" class="sidenav-btn"
+                (click)="navigateTo('/sidebar/config')"
+                [style.background-color]="isConfigButtonClicked ? 'green' : 'white'"
+                [style.color]="isConfigButtonClicked ? 'white' : 'black'">
+          <mat-icon class="icon-btn" aria-hidden="false" aria-label="search_routes-icon" fontIcon="settings"></mat-icon>
+          Configuración
+        </button>
+      </mat-list-item>
+      <mat-list-item class="sidenav-item">
+        <button mat-raised-button color="warn"  class="sidenav-btn">
+          <mat-icon class="icon-btn" aria-hidden="false" aria-label="search_routes-icon" fontIcon="logout"></mat-icon>
+          Cerrar Sesión
+        </button>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
