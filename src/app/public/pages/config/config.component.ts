@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import {MatFormField} from "@angular/material/form-field";
+import {MatFormField, MatLabel} from "@angular/material/form-field";
 import {NgIf} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {MatInput} from "@angular/material/input";
@@ -14,21 +14,17 @@ import {MatInput} from "@angular/material/input";
   templateUrl: 'config.component.html',
   styleUrl: 'config.component.css',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, MatFormField, NgIf, FormsModule, MatInput],
+  imports: [MatCardModule, MatButtonModule, MatFormField, NgIf, FormsModule, MatInput, MatLabel],
 })
 export class ConfigComponent {
 
-  buttonText: string = "Texto inicial";
-  nombre: string = "Nombre";
-  apellido: string = "Apellido";
+  first_name: string = "Nombre";
+  last_name: string = "Apellido";
   email: string = "Email";
 
-  nombreEditable: boolean = false;
-  apellidoEditable: boolean = false;
-  emailEditable: boolean = false;
+  isEditable: boolean = false;
 
-  guardarCambios(campo: string) {
-
+  saveChanges(campo: string) {
     console.log("Guardando cambios para el campo: ", campo);
   }
 }
