@@ -66,7 +66,8 @@ import {MatCheckbox} from "@angular/material/checkbox";
         MatCardContent,
         MatCheckbox,
         MatIconButton,
-        MatSuffix
+        MatSuffix,
+
     ],
   providers: [
     provideAnimationsAsync()

@@ -1,1 +1,32 @@
-<p>search routes works!</p>
+<div class="container">
+    <h1 class="title" style="text-align: center">Busca tu ruta!</h1>
+    <div class="map-container">
+        <google-map height="400px"
+                    width="100%"
+                    [options]="options">
+            @if (directionsResults$ | async; as directionsResults) {
+                <map-directions-renderer [directions]="directionsResults"/>
+            }
+            <map-heatmap-layer></map-heatmap-layer>
+            <map-traffic-layer></map-traffic-layer>
+        </google-map>
+    </div>
+    <div class="row-inputs">
+        <div class="col-first-input">
+            <mat-form-field class="example-full-width second-col">
+                <mat-label>Destino</mat-label>
+                <input type="text" matInput placeholder="Av. Rafael Escardó">
+            </mat-form-field>
+        </div>
+
+        <div class="col-first-input">
+            <mat-form-field class="example-full-width second-col">
+                <mat-label>Destino</mat-label>
+                <input type="text" matInput placeholder="Av. Rafael Escardó">
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="map-btn">
+        <mat-button-toggle>Buscar!</mat-button-toggle>
+    </div>
+</div>
