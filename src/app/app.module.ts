@@ -27,6 +27,7 @@ import { LoginTypeSelectionComponent } from './public/pages/login/type-selection
 import { RegisterDriverComponent } from './public/pages/register/driver/register-driver.component';
 import { LoginDriverComponent } from './public/pages/login/driver/login-driver.component'
 import {MatCheckbox} from "@angular/material/checkbox";
+import { HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,6 @@ import {MatCheckbox} from "@angular/material/checkbox";
         NotificationsComponent,
         PayTicketComponent,
         PromosComponent,
-
         RegisterComponent,
         SearchRoutesComponent,
         SideBarComponent,
@@ -66,7 +66,8 @@ import {MatCheckbox} from "@angular/material/checkbox";
         MatCardContent,
         MatCheckbox,
         MatIconButton,
-        MatSuffix
+        MatSuffix,
+        HttpClientModule
     ],
   providers: [
     provideAnimationsAsync()

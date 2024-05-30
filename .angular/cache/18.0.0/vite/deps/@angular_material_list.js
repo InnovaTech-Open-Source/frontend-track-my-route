@@ -1,9 +1,9 @@
 import {
   SelectionModel
-} from "./chunk-VYONJUCZ.js";
+} from "./chunk-RGLPW4NB.js";
 import {
   NG_VALUE_ACCESSOR
-} from "./chunk-6QK6N5K7.js";
+} from "./chunk-SQMFUS3R.js";
 import {
   A,
   CdkObserveContent,
@@ -17,17 +17,17 @@ import {
   RippleRenderer,
   SPACE,
   hasModifierKey
-} from "./chunk-FRSBEYGG.js";
+} from "./chunk-TN4UOOSU.js";
 import {
   Platform,
   _getFocusedElementPierceShadowDom,
   coerceBooleanProperty,
   coerceNumberProperty
-} from "./chunk-Z6MW5SEA.js";
+} from "./chunk-B37QHZ7R.js";
 import {
   CommonModule,
   NgTemplateOutlet
-} from "./chunk-OWQQWAVD.js";
+} from "./chunk-OEREKIDM.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionStrategy,
@@ -44,15 +44,11 @@ import {
   NgZone,
   Optional,
   Output,
-  Subject,
-  Subscription,
   ViewChild,
   ViewEncapsulation$1,
   forwardRef,
   inject,
-  merge,
   setClassMetadata,
-  takeUntil,
   ɵɵInheritDefinitionFeature,
   ɵɵNgOnChangesFeature,
   ɵɵProvidersFeature,
@@ -87,7 +83,13 @@ import {
   ɵɵtemplate,
   ɵɵtemplateRefExtractor,
   ɵɵviewQuery
-} from "./chunk-ZQ4KBBTS.js";
+} from "./chunk-EHFXTLMH.js";
+import {
+  Subject,
+  Subscription,
+  merge,
+  takeUntil
+} from "./chunk-SXIXOCJ4.js";
 
 // node_modules/@angular/material/fesm2022/divider.mjs
 var _MatDivider = class _MatDivider {
