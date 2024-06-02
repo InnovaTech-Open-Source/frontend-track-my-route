@@ -57,35 +57,35 @@
       "title":"Nueva ruta disponible",
       "subtitle":"Ruta 5",
       "description":"La ruta 5 ahora está disponible.",
-      "img_url":"https://www.flaticon.es/icono-gratis/nuevo-producto_6122991?term=new&page=1&position=88&origin=search&related_id=6122991"
+      "img_url":"https://cdn-icons-png.flaticon.com/512/891/891448.png"
     },
     {
       "id":2,
       "title":"Promoción de verano",
       "subtitle":"50% de descuento",
       "description":"Aprovecha el 50% de descuento en todos los pasajes.",
-      "img_url":"https://www.flaticon.es/icono-gratis/gran-venta_1685230?term=discount&page=1&position=3&origin=search&related_id=1685230"
+      "img_url":"https://w7.pngwing.com/pngs/881/716/png-transparent-promotion-advertising-price-service-vibbo-promocion-leaf-text-service-thumbnail.png"
     },
     {
       "id":3,
       "title":"Actualización de horarios",
       "subtitle":"Ruta 3",
       "description":"Se han actualizado los horarios de la Ruta 3.",
-      "img_url":"https://www.flaticon.es/icono-gratis/horas-laborales_5431220?term=horario&page=1&position=21&origin=search&related_id=5431220"
+      "img_url":"https://cdn-icons-png.flaticon.com/512/4368/4368667.png"
     },
     {
       "id":4,
       "title":"Nuevo paradero",
       "subtitle":"Paradero 10",
       "description":"Se ha añadido un nuevo paradero en la Ruta 4.",
-      "img_url":"https://www.flaticon.es/icono-gratis/mapa_854952?term=ubicacion&page=1&position=7&origin=search&related_id=854952"
+      "img_url":"https://cdn-icons-png.freepik.com/512/936/936862.png"
     },
     {
       "id":5,
       "title":"Conductor destacado",
       "subtitle":"Carlos Gomez",
       "description":"Felicidades a Carlos Gomez por su excelente servicio.",
-      "img_url":"https://www.flaticon.es/icono-gratis/chofer_8711413?term=chofer&page=1&position=5&origin=search&related_id=8711413"
+      "img_url":"https://cdn-icons-png.flaticon.com/512/4635/4635019.png"
     }
   ],
   "buses":[

@@ -3,6 +3,20 @@
 </div>
 
 <div class="notifications-container">
+  <mat-card class="card" *ngFor="let notif of notifications">
+      <mat-card-header>
+          <mat-card-title-group>
+              <mat-card-title class="card-title"> {{ notif.title }} </mat-card-title>
+              <mat-card-subtitle class="card-subtitle"> {{ notif.subtitle }} </mat-card-subtitle>
+              <img mat-card-lg-image alt="img" src="{{notif.img_url}}" >
+          </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content class="notification-content">
+          {{notif.description}}
+      </mat-card-content>
+      <button mat-button color="warn">Eliminar</button>
+  </mat-card>
+
   <mat-card class="card">
     <mat-card-header>
       <mat-card-title-group>
