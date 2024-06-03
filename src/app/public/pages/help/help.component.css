@@ -1,6 +1,7 @@
-.help-container{
-  margin: 100px;
-
+.title{
+  font-family: "MuseoModerno", sans-serif ;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .help-options{
@@ -8,7 +9,7 @@
 }
 
 .search-input mat-form-field {
-  width: 600px;
+  width: 70vw;
 }
 
 .search-input button{
@@ -18,8 +19,23 @@
 }
 
 .contact-btn{
-  color: white;
-  font-size: 16px;
-  width: 500px;
-  height: 60px;
+  width: 350px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #00933C !important;
+  color: white !important;
+}
+
+
+@media (max-width: 768px) {
+  .title{
+    display: none;
+  }
+
+  .help-options{
+    margin-left: 20px;
+  }
 }
