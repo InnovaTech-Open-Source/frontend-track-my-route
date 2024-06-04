@@ -28,7 +28,7 @@ export const routes: Routes = [
             { path: 'notifications', component: NotificationsComponent },
             { path: 'search', component: SearchRoutesComponent },
             { path: 'promos', component: PromosComponent },
-            { path: 'history', component: HistoryComponent },
+            { path: 'trips', component: HistoryComponent },
             { path: 'help', component: HelpComponent },
             { path: 'config', component: ConfigComponent },
         ]},

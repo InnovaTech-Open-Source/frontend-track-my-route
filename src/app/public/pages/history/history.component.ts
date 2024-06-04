@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {MatTableModule} from '@angular/material/table';
+import { TripService } from '../../../tracking/services/trip.service';
 
 export interface TravelHistory {
   destino: string;
@@ -7,15 +8,6 @@ export interface TravelHistory {
   hora: string;
   pasaje: string;
 }
-
-const ELEMENT_DATA: TravelHistory[] = [
-  {origen: "Monterrico", destino: 'Aviacion', hora: '13:00', pasaje: 'S/1.50'},
-  {origen: "Angamos", destino: 'Salaverry', hora: '8:00', pasaje: 'S/1.00'},
-  {origen: "Av. Arequipa", destino: 'Angamos', hora: '16:00', pasaje: 'S/2.00'},
-  {origen: "Av. Larco", destino: 'Benavides', hora: '1:00', pasaje: 'S/1.00'},
-  {origen: "Javier Prado", destino: 'Av. San Luis', hora: '18:00', pasaje: 'S/1.50'},
-];
-
 
 @Component({
   selector: 'app-history',
@@ -26,18 +18,24 @@ const ELEMENT_DATA: TravelHistory[] = [
 })
 export class HistoryComponent {
   displayedColumns: string[] = ['origen', 'destino', 'hora', 'pasaje'];
-  dataSource = ELEMENT_DATA;
-  clickedRows: { [key: string]: boolean } = {};
+  dataSource: any;
+  clickedRow: number | null = null;
 
-  rowClicked(row: TravelHistory) {
-    if (this.clickedRows[row.origen]) {
-      this.clickedRows[row.origen] = false;
-    } else {
-      this.clickedRows[row.origen] = true;
-    }
+  constructor(private tripService: TripService) {}
+
+  rowClicked(index: number) {
+    this.clickedRow = index === this.clickedRow ? null : index;
   }
 
-  isRowClicked(row: TravelHistory): boolean {
-    return this.clickedRows[row.origen];
+  isRowClicked(index: number): boolean {
+    return index === this.clickedRow;
+  }
+
+  ngOnInit() {
+    this.tripService.getAll().subscribe(
+        (data: any) => {
+          this.dataSource = data;
+        }
+    );
   }
 }

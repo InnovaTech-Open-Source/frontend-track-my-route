@@ -350,30 +350,10 @@
     }
   ],
   "trips":[
-    {
-      "id":1,
-      "start_date":"2024-05-01T08:00:00",
-      "end_date":"2024-05-01T09:00:00"
-    },
-    {
-      "id":2,
-      "start_date":"2024-05-02T10:00:00",
-      "end_date":"2024-05-02T11:00:00"
-    },
-    {
-      "id":3,
-      "start_date":"2024-05-03T12:00:00",
-      "end_date":"2024-05-03T13:00:00"
-    },
-    {
-      "id":4,
-      "start_date":"2024-05-04T14:00:00",
-      "end_date":"2024-05-04T15:00:00"
-    },
-    {
-      "id":5,
-      "start_date":"2024-05-05T16:00:00",
-      "end_date":"2024-05-05T17:00:00"
-    }
+    { "id": 1, "origin": "Monterrico", "destination": "Aviacion", "time": "13:00", "fare": "S/1.50" },
+    { "id": 2, "origin": "Angamos", "destination": "Salaverry", "time": "8:00", "fare": "S/1.00" },
+    { "id": 3, "origin": "Av. Arequipa", "destination": "Angamos", "time": "16:00", "fare": "S/2.00" },
+    { "id": 4, "origin": "Av. Larco", "destination": "Benavides", "time": "1:00", "fare": "S/1.00" },
+    { "id": 5,"origin": "Javier Prado", "destination": "Av. San Luis", "time": "18:00", "fare": "S/1.50" }
   ]
 }

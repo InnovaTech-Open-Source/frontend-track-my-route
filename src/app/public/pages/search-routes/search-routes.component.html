@@ -11,22 +11,13 @@
             <map-traffic-layer></map-traffic-layer>
         </google-map>
     </div>
-    <div class="row-inputs">
-        <div class="col-first-input">
-            <mat-form-field class="example-full-width second-col">
-                <mat-label>Destino</mat-label>
-                <input type="text" matInput placeholder="Av. Rafael Escardó">
-            </mat-form-field>
-        </div>
 
-        <div class="col-first-input">
-            <mat-form-field class="example-full-width second-col">
-                <mat-label>Destino</mat-label>
-                <input type="text" matInput placeholder="Av. Rafael Escardó">
-            </mat-form-field>
-        </div>
-    </div>
     <div class="map-btn">
-        <mat-button-toggle>Buscar!</mat-button-toggle>
+        <mat-radio-group [(ngModel)]="selectedCoordinates" (change)="onChangeCoordinates($event)">
+            <mat-radio-button value="ruta01">Bus 01</mat-radio-button>
+            <mat-radio-button value="ruta02">Bus 02</mat-radio-button>
+            <mat-radio-button value="ruta03">Bus 03</mat-radio-button>
+        </mat-radio-group>
     </div>
+
 </div>
