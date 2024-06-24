@@ -18,7 +18,7 @@ import { RecoverPasswordComponent } from './public/pages/recover-password/recove
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle} from "@angular/material/card";
-import {MatFormField, MatLabel, MatSuffix} from "@angular/material/form-field";
+import {MatFormFieldModule, MatLabel, MatSuffix} from "@angular/material/form-field";
 import {MatIcon} from "@angular/material/icon";
 import {MatInput} from "@angular/material/input";
 import { LayoutModule } from '@angular/cdk/layout';
@@ -72,7 +72,7 @@ import { SignUpComponent } from './iam/pages/sign-up/sign-up.component';
         MatCardHeader,
         MatCardSubtitle,
         MatCardTitle,
-        MatFormField,
+        MatFormFieldModule,
         MatIcon,
         MatInput,
         MatLabel,
