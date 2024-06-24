@@ -25,7 +25,7 @@
               <mat-checkbox formControlName="remember">Recuérdame</mat-checkbox>
               <a (click)="redirectToRecoverPassword()" class="link">¿Olvidaste tu contraseña?</a>
           </div>
-
+      </form>
         <div class="login-redirect-container">
             <button mat-raised-button color="primary" type="submit" class="login-button" (click)="redirectToApp()">Ingresar</button>
             <span>¿Aún no tienes una cuenta?
@@ -33,7 +33,6 @@
             </span>
 
         </div>
-      </form>
     </mat-card-content>
       <button mat-button color="primary" type="submit" class="back-button" (click)="redirectToSelectType()">
           <mat-icon aria-hidden="false" aria-label="back-icon" fontIcon="arrow_back"></mat-icon>

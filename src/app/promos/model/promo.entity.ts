@@ -1,15 +1,15 @@
 export class Promo {
     id: number;
-    img_url: string;
-    title: string;
-    valid_date: string;
-    benefit: string;
+    description: string;
+    imageUrl: string;
+    name: string;
+    validUntil: Date;
 
     constructor() {
         this.id = 0;
-        this.title = "";
-        this.img_url = "";
-        this.valid_date = "";
-        this.benefit = "";
+        this.description = "";
+        this.imageUrl = "";
+        this.name = "";
+        this.validUntil = new Date();
     }
 }

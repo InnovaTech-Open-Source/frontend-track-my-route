@@ -27,7 +27,7 @@ import { LoginTypeSelectionComponent } from './public/pages/login/type-selection
 import { RegisterDriverComponent } from './public/pages/register/driver/register-driver.component';
 import { LoginDriverComponent } from './public/pages/login/driver/login-driver.component'
 import {MatCheckbox} from "@angular/material/checkbox";
-import { HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { SideBarDriverComponent } from './public/components/side-bar-driver/side-bar-driver.component';
 import {MatDrawer, MatDrawerContainer, MatDrawerContent} from "@angular/material/sidenav";
 import {MatToolbar} from "@angular/material/toolbar";
@@ -38,6 +38,7 @@ import {GoogleMap, MapDirectionsRenderer, MapHeatmapLayer, MapTrafficLayer} from
 import { AuthenticationSectionComponent } from './iam/components/authentication-section/authentication-section.component';
 import { SignInComponent } from './iam/pages/sign-in/sign-in.component';
 import { SignUpComponent } from './iam/pages/sign-up/sign-up.component';
+import { AuthenticationInterceptor } from "./iam/services/authentication.interceptor";
 
 @NgModule({
   declarations: [
@@ -95,7 +96,8 @@ import { SignUpComponent } from './iam/pages/sign-up/sign-up.component';
         MapTrafficLayer
     ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+      { provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
