@@ -35,6 +35,9 @@ import { SelectRouteComponent } from './select-route/pages/select-route.componen
 import {MatOption} from "@angular/material/core";
 import {MatSelect} from "@angular/material/select";
 import {GoogleMap, MapDirectionsRenderer, MapHeatmapLayer, MapTrafficLayer} from "@angular/google-maps";
+import { AuthenticationSectionComponent } from './iam/components/authentication-section/authentication-section.component';
+import { SignInComponent } from './iam/pages/sign-in/sign-in.component';
+import { SignUpComponent } from './iam/pages/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import {GoogleMap, MapDirectionsRenderer, MapHeatmapLayer, MapTrafficLayer} from
     RegisterDriverComponent,
     LoginDriverComponent,
     SideBarDriverComponent,
-    SelectRouteComponent
+    SelectRouteComponent,
+    AuthenticationSectionComponent,
+    SignInComponent,
+    SignUpComponent
   ],
     imports: [
         BrowserModule,
