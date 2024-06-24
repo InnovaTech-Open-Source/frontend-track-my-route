@@ -31,7 +31,7 @@ export class HistoryComponent {
     return index === this.clickedRow;
   }
 
-  ngOnInit() {
+  ngOnInit() :void {
     this.tripService.getAll().subscribe(
         (data: any) => {
           this.dataSource = data;

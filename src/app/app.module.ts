@@ -18,7 +18,7 @@ import { RecoverPasswordComponent } from './public/pages/recover-password/recove
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatCard, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardTitle} from "@angular/material/card";
-import {MatFormField, MatLabel, MatSuffix} from "@angular/material/form-field";
+import {MatFormFieldModule, MatLabel, MatSuffix} from "@angular/material/form-field";
 import {MatIcon} from "@angular/material/icon";
 import {MatInput} from "@angular/material/input";
 import { LayoutModule } from '@angular/cdk/layout';
@@ -27,7 +27,7 @@ import { LoginTypeSelectionComponent } from './public/pages/login/type-selection
 import { RegisterDriverComponent } from './public/pages/register/driver/register-driver.component';
 import { LoginDriverComponent } from './public/pages/login/driver/login-driver.component'
 import {MatCheckbox} from "@angular/material/checkbox";
-import { HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { SideBarDriverComponent } from './public/components/side-bar-driver/side-bar-driver.component';
 import {MatDrawer, MatDrawerContainer, MatDrawerContent} from "@angular/material/sidenav";
 import {MatToolbar} from "@angular/material/toolbar";
@@ -35,6 +35,10 @@ import { SelectRouteComponent } from './select-route/pages/select-route.componen
 import {MatOption} from "@angular/material/core";
 import {MatSelect} from "@angular/material/select";
 import {GoogleMap, MapDirectionsRenderer, MapHeatmapLayer, MapTrafficLayer} from "@angular/google-maps";
+import { AuthenticationSectionComponent } from './iam/components/authentication-section/authentication-section.component';
+import { SignInComponent } from './iam/pages/sign-in/sign-in.component';
+import { SignUpComponent } from './iam/pages/sign-up/sign-up.component';
+import { AuthenticationInterceptor } from "./iam/services/authentication.interceptor";
 
 @NgModule({
   declarations: [
@@ -45,7 +49,10 @@ import {GoogleMap, MapDirectionsRenderer, MapHeatmapLayer, MapTrafficLayer} from
     RegisterDriverComponent,
     LoginDriverComponent,
     SideBarDriverComponent,
-    SelectRouteComponent
+    SelectRouteComponent,
+    AuthenticationSectionComponent,
+    SignInComponent,
+    SignUpComponent
   ],
     imports: [
         BrowserModule,
@@ -66,7 +73,7 @@ import {GoogleMap, MapDirectionsRenderer, MapHeatmapLayer, MapTrafficLayer} from
         MatCardHeader,
         MatCardSubtitle,
         MatCardTitle,
-        MatFormField,
+        MatFormFieldModule,
         MatIcon,
         MatInput,
         MatLabel,
@@ -89,7 +96,8 @@ import {GoogleMap, MapDirectionsRenderer, MapHeatmapLayer, MapTrafficLayer} from
         MapTrafficLayer
     ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+      { provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

@@ -8,7 +8,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import {Router, RouterLink} from '@angular/router';
 
 
 @Component({
@@ -19,7 +19,7 @@ import { Router } from '@angular/router';
     MatCheckboxModule,
     MatButtonModule,
     MatIconModule,
-    ReactiveFormsModule ],
+    ReactiveFormsModule, RouterLink],
   templateUrl: './login-passenger.component.html',
   styleUrls: ['./login-passenger.component.scss']
 })

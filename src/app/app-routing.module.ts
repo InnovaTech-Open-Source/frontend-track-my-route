@@ -17,7 +17,8 @@ import {RegisterDriverComponent} from "./public/pages/register/driver/register-d
 import {LoginDriverComponent} from "./public/pages/login/driver/login-driver.component";
 import {SideBarDriverComponent} from "./public/components/side-bar-driver/side-bar-driver.component";
 import {SelectRouteComponent} from './select-route/pages/select-route.component';
-
+import {SignInComponent} from "./iam/pages/sign-in/sign-in.component";
+import {SignUpComponent} from "./iam/pages/sign-up/sign-up.component";
 export const routes: Routes = [
     { path: 'register/passenger', component: RegisterComponent },
     {path: 'register/driver', component: RegisterDriverComponent},
@@ -38,6 +39,9 @@ export const routes: Routes = [
             { path: 'help', component: HelpComponent },
             { path: 'config', component: ConfigComponent },
         ]},
+    { path: 'sign-in', component: SignInComponent },
+    { path: 'sign-up', component: SignUpComponent },
+
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     {path: '**', component: NotFoundComponent}
 ];
