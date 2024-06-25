@@ -2,11 +2,42 @@ import {BusStop} from "./bus-stop.entity";
 
 export class Bus{
     id: number;
-    bus_name: string;
-    bus_stops: BusStop[];
+    bus: {
+        busName: String,
+        fullBusName: String,
+    };
+    origin:{
+        originStop: String,
+        originLatitude: String,
+        originLongitude:String,
+        fullOriginCoordinate: String
+    };
+
+    destination: {
+        destinationStop: String,
+        destinationLatitude: String,
+        destinationLongitude: String,
+        fullDestinationCoordinate: String,
+    }
+
     constructor() {
         this.id = 0;
-        this.bus_name = "";
-        this.bus_stops = [];
+        this.bus = {
+            busName : "",
+            fullBusName : ""
+        };
+        this.origin = {
+            originStop: "",
+            originLatitude: "",
+            originLongitude: "",
+            fullOriginCoordinate: ""
+        };
+
+        this.destination = {
+            destinationStop:"",
+            destinationLatitude: "",
+            destinationLongitude: "",
+            fullDestinationCoordinate: ""
+        }
     }
 }
