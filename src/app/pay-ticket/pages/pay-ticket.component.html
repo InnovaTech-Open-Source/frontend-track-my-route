@@ -8,7 +8,7 @@
                 <mat-label>---Seleccionar Bus---</mat-label>
                 <mat-select  [(value)]="selectedBus">
                     <mat-option *ngFor="let bus of buses" [value]="bus">
-                        {{bus.bus_name}}
+                        {{bus.bus.busName}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
@@ -19,8 +19,8 @@
             <mat-form-field appearance="outline" class="form">
                 <mat-label>---Seleccionar Origen---</mat-label>
                 <mat-select [(value)]="selectedBusStopOrigin">
-                    <mat-option *ngFor="let bus_stop of selectedBus?.bus_stops" [value]="bus_stop">
-                        {{bus_stop.stop_name}}
+                    <mat-option *ngFor="let bus_stop of buses" [value]="bus_stop">
+                        {{bus_stop.origin.originLongitude}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
@@ -31,8 +31,8 @@
             <mat-form-field appearance="outline" class="form">
                 <mat-label>---Seleccionar Destino---</mat-label>
                 <mat-select [(value)]="selectedBusStopDestination">
-                    <mat-option *ngFor="let bus_stop of selectedBus?.bus_stops" [value]="bus_stop">
-                        {{bus_stop.stop_name}}
+                    <mat-option *ngFor="let bus_stop of buses" [value]="bus_stop">
+                        {{bus_stop.destination.destinationLongitude}}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
