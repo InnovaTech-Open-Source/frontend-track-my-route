@@ -1,3 +1,3 @@
 export const environment = {
-    serverBasePath: 'http://40.71.173.200/api/v1'
+    serverBasePath: 'https://40.71.173.200/api/v1'
 };
